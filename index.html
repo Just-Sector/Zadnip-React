@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 </html>
 
 <script>
-    const one = parseInt(prompt('1 число'));
-    const two = parseInt(prompt('2 число'));
-    const object = {};
-    console.log('one', one === '' ? one=0 : one);
-    console.log('two', two === '' ? two=22 : two);
-    if (one >=90)
-    {object.size = 'big'}
-    else if (one <=40)
-    {object.size = 'small'}
-    else
-    {object.size = 'medium'}
-    const three = one > 0 && two > 0 ? 80 : 40;
-    console.log('bool', three)
-    console.log(object)
-    let res;
-    switch (object.size) {
-        case 'big':
-           res = 1000; 
-            break;
-        case 'medium':
-            res = 100;
-            break; 
-        case 'small':
-            res = 10;
-            break;
-        default:
-            break;
+    let str = "";
+    let a;
+    /// 1 завдання
+    for (a = 10; a <= 20; a++) {
+        a <= 19 ? str += a + ', ' : str += a + '.'
     }
-    console.log('res = ', res)
-
-    const fRes = one * two * three * res;
-    if (fRes % 2 !== 0)
-        { console.log('Roma') }
-    else if(two > 50)
-        { alert(`${two}`);  }
+    console.log(str);
+    str = '';
+    // 2 завдання
+    let a2;
+    for (a2 = 10; a2 <= 20; a2++) {
+        a2 <= 19 ? str += a2 ** 2 + ', ' : str += a2 ** 2 + '.'
+    }
+    console.log(str);
+    // 3 завдання
+    let summa = 0;
+    let a3;
+    for (a3 = 15; a3 <= 35; a3++) {
+        summa += a3;
+    }
+    console.log(summa);
+    // 4 завдання
+    let summa2 = 0;
+    let a4;
+    for (a4 = 1; a4 <= 500; a4++) {
+        summa2 += a4;
+    }
+    console.log(summa2);
+    // 5 завдання
+    let summa3 = 0;
+    let a5;
+    for (a5 = 30; a5 <= 80; a5++) {
+        if (a5 % 2 === 0) {
+            summa3 += a5;
+        }
+    }
+    console.log(summa3);
+    // 6 завдання
+    let summa4 = 0;
+    let a6;
+    for (let a6 = 100; a6 < 200; a6++) {
+        if (a6 % 3 === 0) {
+            summa4 += a6;
+        }
+    }
+    console.log(summa4);
+    // 7 завдання
+    let number = parseInt(prompt('Введіть число'));
+    let stage = true;
+    let a7;
+    if (number >= 2) {
+        for (a7 = 2; a7 < number; a7++) {
+            if (number % a7 === 0) {
+                stage = false;
+            }
+        }
+    }
+    else { stage = false; }
+    console.log(stage);
 </script>
