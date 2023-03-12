@@ -9,9 +9,39 @@
 </html>
 
 <script>
-    let Name = prompt('Як тебе звати?');
-    let TwoName = prompt('Яке в тебе прізвище?');
-    let Age = Number(prompt('Скільки тобі років?'));
-    let City = prompt('З якого ти міста?');
-    alert('Вас звати ' + Name + ' Ваше прізвище ' + TwoName + ' Вам ' + Age + ' років.' + ' Ви з міста ' + City);
+    const one = parseInt(prompt('1 число'));
+    const two = parseInt(prompt('2 число'));
+    const object = {};
+    console.log('one', one === '' ? one=0 : one);
+    console.log('two', two === '' ? two=22 : two);
+    if (one >=90)
+    {object.size = 'big'}
+    else if (one <=40)
+    {object.size = 'small'}
+    else
+    {object.size = 'medium'}
+    const three = one > 0 && two > 0 ? 80 : 40;
+    console.log('bool', three)
+    console.log(object)
+    let res;
+    switch (object.size) {
+        case 'big':
+           res = 1000; 
+            break;
+        case 'medium':
+            res = 100;
+            break; 
+        case 'small':
+            res = 10;
+            break;
+        default:
+            break;
+    }
+    console.log('res = ', res)
+
+    const fRes = one * two * three * res;
+    if (fRes % 2 !== 0)
+        { console.log('Roma') }
+    else if(two > 50)
+        { alert(`${two}`);  }
 </script>
